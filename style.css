@@ -1,18 +1,19 @@
 /* 1. Global Settings & Color Palette */
 :root {
     --background-color: #f5f5f7;
-    --card-background: #ffffff;
-    --text-primary: #1d1d1f;
-    --text-secondary: #6e6e73;
-    --action-blue: #007aff;
-    --border-color: #d2d2d7;
+    --text-primary-dark: #1d1d1f;
+    --text-secondary-dark: #6e6e73;
+    --text-light: #ffffff;
+    --text-light-secondary: rgba(255, 255, 255, 0.7);
+    --button-background: rgba(255, 255, 255, 0.15);
+    --button-background-hover: rgba(255, 255, 255, 0.25);
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     background-color: var(--background-color);
-    color: var(--text-primary);
+    color: var(--text-primary-dark);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -32,7 +33,7 @@ body {
 
 .site-tagline {
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary-dark);
     margin-top: 0.5rem;
 }
 
@@ -51,36 +52,37 @@ body {
 }
 
 .game-card {
-    background-color: var(--card-background);
-    border-radius: 18px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    display: flex; /* Use flexbox for layout */
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 24px;
+    display: flex;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    min-height: 400px; /* 給予卡片一個最小高度 */
 }
 
 .game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card-content {
     padding: 2rem;
     display: flex;
-    flex-direction: column; /* Arrange content vertically */
-    flex-grow: 1; /* Allow content to fill the card */
+    flex-direction: column;
+    flex-grow: 1;
+    color: var(--text-light); /* 卡片內文字改為白色 */
 }
 
 .game-category {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--action-blue);
+    color: var(--text-light);
+    opacity: 0.8;
     margin-bottom: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .card-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0 0 0.75rem 0;
     line-height: 1.2;
@@ -88,34 +90,54 @@ body {
 
 .card-description {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-light-secondary);
     line-height: 1.6;
     margin: 0;
-    flex-grow: 1; /* Push the button to the bottom */
+    flex-grow: 1;
 }
 
 .play-button {
     display: inline-block;
-    background-color: var(--action-blue);
-    color: #fff;
+    background-color: var(--button-background);
+    color: var(--text-light);
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
     border-radius: 980px;
-    margin-top: 2rem; /* Space between description and button */
-    align-self: flex-start; /* Align button to the left */
+    margin-top: 2rem;
+    align-self: flex-start;
     transition: background-color 0.2s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .play-button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-background-hover);
 }
 
-/* 5. Footer */
+/* 5. Gradient Backgrounds for Cards */
+.card-blue {
+    background-image: linear-gradient(45deg, #007aff 0%, #5856d6 100%);
+}
+.card-orange {
+    background-image: linear-gradient(45deg, #ff9500 0%, #ff3b30 100%);
+}
+.card-purple {
+    background-image: linear-gradient(45deg, #af52de 0%, #5856d6 100%);
+}
+.card-teal {
+    background-image: linear-gradient(45deg, #30d158 0%, #007aff 100%);
+}
+.card-indigo {
+    background-image: linear-gradient(45deg, #5856d6 0%, #af52de 100%);
+}
+
+
+/* 6. Footer */
 .site-footer {
     text-align: center;
     padding: 4rem 1.5rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary-dark);
     font-size: 0.8rem;
 }
