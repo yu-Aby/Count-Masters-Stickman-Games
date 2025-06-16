@@ -1,82 +1,71 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AbyGame - 探索、遊玩、樂在其中</title>
+    <title>AbyGame - Curated Games to Discover & Play</title>
+    <meta name="description" content="Discover and play a curated selection of high-quality online games. From action-packed runners to brain-teasing puzzles, find your next favorite game here.">
+    <link rel="canonical" href="https://yu-aby.github.io/Count-Masters-Stickman-Games/">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XR7HPM4Z6J"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-XR7HPM4Z6J');
     </script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="site-header">
-        <div class="header-content">
-            <h1 class="site-title">AbyGame</h1>
-            <p class="site-tagline">探索、遊玩、樂在其中。</p>
-        </div>
+        <h1 class="site-title">AbyGame</h1>
     </header>
 
     <main class="site-main">
-        <ul class="game-list">
-            <li>
-                <a href="games/count-masters.html">
-                    <span class="game-icon">🏃‍♂️</span>
-                    <div class="game-info">
-                        <span class="game-title">Count Masters</span>
-                        <span class="game-description">人群的力量，由你掌控。</span>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="games/paper-boy-race.html">
-                    <span class="game-icon">🚴</span>
-                    <div class="game-info">
-                        <span class="game-title">Paper Boy Race</span>
-                        <span class="game-description">一場復古的街頭競速。</span>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="games/merge-run.html">
-                    <span class="game-icon">👾</span>
-                    <div class="game-info">
-                        <span class="game-title">Merge Run</span>
-                        <span class="game-description">合成、進化、奔跑。</span>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="games/break-free.html">
-                    <span class="game-icon">🔑</span>
-                    <div class="game-info">
-                        <span class="game-title">Break Free</span>
-                        <span class="game-description">智慧是唯一的鑰匙。</span>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="games/layers-roll.html">
-                    <span class="game-icon">🎨</span>
-                    <div class="game-info">
-                        <span class="game-title">Layers Roll</span>
-                        <span class="game-description">滾動，堆疊，極致療癒。</span>
-                    </div>
-                </a>
-            </li>
-        </ul>
+        <section class="hero-section" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.7) 100%), url(images/count-masters.jpg);">
+            <div class="hero-content">
+                <h2 class="hero-title">Count Masters</h2>
+                <p class="hero-hook">From a single unit to an unstoppable swarm.</p>
+                <p class="hero-description">Experience the ultimate power trip as your lone warrior multiplies into an overwhelming force. Every gate you pass is a strategic choice that turns the tide of battle. This isn't just a runner—it's a masterclass in momentum.</p>
+                <a href="games/count-masters.html" class="play-button">Play Now</a>
+            </div>
+        </section>
+
+        <div class="game-showcase">
+            <a href="games/paper-boy-race.html" class="game-card">
+                <div class="card-visual" style="background-image: url(images/paper-boy-race.jpg);"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Paper Boy Race</h2>
+                    <p>More than a paper route. It's a street legend in the making.</p>
+                </div>
+            </a>
+            <a href="games/merge-run.html" class="game-card">
+                <div class="card-visual" style="background-image: url(images/merge-run.jpg);"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Merge Run</h2>
+                    <p>Every merge is a high-stakes gamble.</p>
+                </div>
+            </a>
+            <a href="games/break-free.html" class="game-card">
+                <div class="card-visual" style="background-image: url(images/break-free.jpg);"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Break Free</h2>
+                    <p>Your mind is the only key.</p>
+                </div>
+            </a>
+            <a href="games/layers-roll.html" class="game-card">
+                <div class="card-visual" style="background-image: url(images/layers-roll.jpg);"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Layers Roll</h2>
+                    <p>Roll your stress away.</p>
+                </div>
+            </a>
+        </div>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2025 AbyGame. 版權所有。</p>
+        <p>&copy; 2025 AbyGame. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
